@@ -1,0 +1,37 @@
+
+---
+
+#### `conversor.py`
+
+```python
+def celsius_para_fahrenheit(c):
+    return (c * 9/5) + 32
+
+def celsius_para_kelvin(c):
+    return c + 273.15
+
+def fahrenheit_para_celsius(f):
+    return (f - 32) * 5/9
+
+def kelvin_para_celsius(k):
+    return k - 273.15
+
+print("=== Conversor de Temperatura ===")
+print("1 - Celsius para Fahrenheit")
+print("2 - Celsius para Kelvin")
+print("3 - Fahrenheit para Celsius")
+print("4 - Kelvin para Celsius")
+
+opcao = int(input("Escolha a opção: "))
+valor = float(input("Digite a temperatura: "))
+
+if opcao == 1:
+    print("Resultado:", celsius_para_fahrenheit(valor), "°F")
+elif opcao == 2:
+    print("Resultado:", celsius_para_kelvin(valor), "K")
+elif opcao == 3:
+    print("Resultado:", fahrenheit_para_celsius(valor), "°C")
+elif opcao == 4:
+    print("Resultado:", kelvin_para_celsius(valor), "°C")
+else:
+    print("Opção inválida!")
